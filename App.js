@@ -13,9 +13,8 @@ import {
   ScrollView,
   View,
   Text,
-  StatusBar, Dimensions, Image
+  StatusBar, Dimensions, Image, TouchableOpacity
 } from 'react-native';
-
 import {
   Header,
   LearnMoreLinks,
@@ -23,70 +22,15 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import UserInfo from './Components/userInformation'
+import SocialMedia from './Components/socialMedia'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 const { height, width } = Dimensions.get("window")
 class App extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.upperHalf}>
-          <View style={styles.rightSection}>
-            <Image source={require('./Images/Filtered_Image.png')} style={styles.profilePicture} />
-            <View style={styles.influencerInfo}>
-              <Text style={{ fontSize: 20, color: 'white' }}>اسم المؤثر</Text>
-              <Text style={{ fontSize: 20, color: 'white' }}>البلد</Text>
-            </View>
-          </View>
-          <View style={styles.leftSection}>
-
-          </View>
-        </View>
-        <View style={styles.downSection}>
-
-        </View>
-      </View>
-    );
+    return <SocialMedia socialIcon={"instagram"}/>
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column"
-  },
-  upperHalf: {
-    flex: 1,
-    backgroundColor: 'black',
-    flexDirection: "row-reverse",
-
-  },
-  downSection: {
-    flex: 1,
-    backgroundColor: 'black',
-    flexDirection: "row"
-  },
-  rightSection: {
-    backgroundColor: 'blue',
-    flex: 0.5,
-    alignItems: "flex-start",
-    flexDirection: "row-reverse",
-    paddingTop: "10%"
-  },
-  leftSection: {
-    backgroundColor: 'red',
-    flex: 0.5
-  },
-  profilePicture: {
-    width: 75,
-    height: 75,
-    borderRadius: 50,
-    margin: width * 0.02
-  },
-  influencerInfo: {
-    alignItems: "center",
-    alignItems: "flex-end",
-    margin: width * 0.02,
-    // marginBottom: width * 0.02,
-  }
-});
 
 export default App;

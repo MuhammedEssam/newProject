@@ -23,6 +23,7 @@ import {
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import SocialMedia from '../Components/socialMedia'
 const { height, width } = Dimensions.get("window")
 class UserInfo extends Component {
     render() {
@@ -34,17 +35,41 @@ class UserInfo extends Component {
                             <Image source={require('../Images/Filtered_Image.png')} style={styles.profilePicture} /></TouchableOpacity>
                         <View style={styles.influencerInfo}>
                             <TouchableOpacity>
-                                <Text style={{ fontSize: 20, color: 'white' }}>اسم المؤثر</Text></TouchableOpacity>
+                                <Text style={{ fontSize: 25, color: '#2d3436' }}>اسم المؤثر</Text></TouchableOpacity>
                             <View style={styles.location}>
-                                <Icon name="location-on" size={20} color="white" />
-                                <Text style={{ fontSize: 20, color: 'white' }}>البلد</Text>
+                                <Icon name="location-on" size={20} color="#636e72" />
+                                <Text style={{ fontSize: 20, color: '#636e72' }}>البلد</Text>
                             </View>
                         </View>
                     </View>
                     <View style={styles.leftSection}>
+                        <SocialMedia socialIcon={"instagram"} followers={255} followersNumber={"K"} iconColor={"#ff4757"} />
+                        <SocialMedia socialIcon={"snapchat"} followers={255} followersNumber={"K"} iconColor={"#ffd32a"} />
+                        <SocialMedia socialIcon={"twitter"} followers={255} followersNumber={"K"} iconColor={"#1B9CFC"} />
                     </View>
                 </View>
                 <View style={styles.downSection}>
+                    <View style={styles.campaignTime}>
+                        <Text style={{ fontSize: 20, fontWeight: "bold", color: "#1B9CFC" }}>موعد الاعلان</Text>
+                    </View>
+                    <View style={{ justifyContent: "flex-start", flexDirection: "row-reverse" }}>
+                        <View style={{ alignItems: "center", marginRight: 0.05 * width, flexDirection: "column" }}>
+                            <Text style={{ fontSize: 20, fontWeight: "bold" }}>45</Text>
+                            <Text style={{ alignSelf: "center", fontSize: 15, color: '#636e72' }}>دقيقة</Text>
+                        </View>
+                        <View style={{ alignItems: "center", marginRight: 0.05 * width, flexDirection: "column" }}>
+                            <Text style={{ fontSize: 20, fontWeight: "bold" }}>45</Text>
+                            <Text style={{ alignSelf: "center", fontSize: 15, color: '#636e72' }}>ساعة</Text>
+                        </View>
+                        <View style={{ alignItems: "center", marginRight: 0.05 * width, flexDirection: "column" }}>
+                            <Text style={{ fontSize: 20, fontWeight: "bold" }}>45</Text>
+                            <Text style={{ alignSelf: "center", fontSize: 15, color: '#636e72' }}>ايام</Text>
+                        </View>
+                        <View style={{ alignItems: "center", marginRight: 0.05 * width, flexDirection: "column", marginRight: 0.1 * width }}>
+                            <Text style={{ fontSize: 15, marginBottom: 0.01 * width, color: '#636e72' }}>30/12/2019</Text>
+                            <Text style={{ alignSelf: "center", fontSize: 15, color: '#636e72' }}>10:00 PM</Text>
+                        </View>
+                    </View>
                 </View>
             </View>
         );
@@ -54,29 +79,29 @@ class UserInfo extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: "column",
-        backgroundColor:"#dfe4ea"
+        flexDirection: "column"
     },
     upperHalf: {
-        flex: 1,
         flexDirection: "row-reverse",
-
+        backgroundColor: "white"
     },
     downSection: {
         flex: 1,
-        backgroundColor: 'black',
-        flexDirection: "row"
+        flexDirection: "column",
+        backgroundColor: "white"
     },
     rightSection: {
-        backgroundColor: 'blue',
-        flex: 0.5,
+        flex: 1,
         alignItems: "flex-start",
         flexDirection: "row-reverse",
         paddingTop: "10%"
     },
     leftSection: {
-        backgroundColor: 'red',
-        flex: 0.5
+
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
     },
     profilePicture: {
         width: width * 0.12,
@@ -93,6 +118,11 @@ const styles = StyleSheet.create({
     location: {
         flexDirection: "row-reverse",
         alignItems: "center"
+    },
+    campaignTime: {
+        alignSelf: "flex-end",
+        paddingTop: "5%",
+        margin: width * 0.05,
     }
 });
 

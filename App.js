@@ -28,7 +28,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 const { height, width } = Dimensions.get("window")
 class App extends Component {
   render() {
-    return <SocialMedia socialIcon={"instagram"}/>
+    return <UserInfo />
+
   }
 }
 

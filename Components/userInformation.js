@@ -43,7 +43,7 @@ class UserInfo extends Component {
                         </View>
                     </View>
                     <View style={styles.leftSection}>
-                        <SocialMedia socialIcon={"instagram"} followers={255} followersNumber={"K"} iconColor={"#ff4757"} />
+                        <SocialMedia socialIcon={"instagram"} followers={250} followersNumber={"K"} iconColor={"#ff4757"} />
                         <SocialMedia socialIcon={"snapchat"} followers={255} followersNumber={"K"} iconColor={"#ffd32a"} />
                         <SocialMedia socialIcon={"twitter"} followers={255} followersNumber={"K"} iconColor={"#1B9CFC"} />
                     </View>
@@ -88,7 +88,8 @@ const styles = StyleSheet.create({
     downSection: {
         flex: 1,
         flexDirection: "column",
-        backgroundColor: "white"
+        backgroundColor: "white",
+        
     },
     rightSection: {
         flex: 1,
@@ -121,8 +122,9 @@ const styles = StyleSheet.create({
     },
     campaignTime: {
         alignSelf: "flex-end",
-        paddingTop: "5%",
-        margin: width * 0.05,
+        marginRight: width * 0.06,
+        marginBottom:width * 0.02
+
     }
 });
 

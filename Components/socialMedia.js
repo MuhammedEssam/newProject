@@ -24,7 +24,7 @@ const SocialMedia = (props) => {
       </View>
       <View style={styles.followerContainer}>
         <Text style={{ fontSize: 15, fontWeight: "bold", backgroundColor: "white" }}>{props.followers}</Text>
-        <Text style={{ fontSize: 20, color: "#1B9CFC" }}>{props.followersNumber}</Text>
+        <Text style={{ fontSize: 15, color: "#1B9CFC" ,fontWeight:"300"}}>{props.followersNumber}</Text>
       </View>
     </View>
   )

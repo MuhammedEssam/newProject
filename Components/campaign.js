@@ -17,6 +17,7 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Tabs from 'react-native-tabs'
+import Userinfo from './userInformation'
 const { height, width } = Dimensions.get("window")
 
 export default class Campaign extends Component {
@@ -38,16 +39,18 @@ export default class Campaign extends Component {
                         <Icon name="ios-arrow-forward" size={25} color="#1B9CFC" /></TouchableOpacity>
                 </View>
                 <View style={styles.CampaignTitle}>
-                    <Text style={{ color: "grey", fontSize: 25, fontWeight: "bold" }}>اعلان وجبة جديدة لشارومر </Text>
+                    <Text style={{ color: "#535c68", fontSize: 25, fontWeight: "bold" }}>اعلان وجبة جديدة لشارومر </Text>
                 </View>
-                <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop:0.05*height }}>
-                    <Tabs selected={this.state.page} style={{ backgroundColor: 'white' }}
+                <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: 0.05 * height }}>
+                    <Tabs selected={this.state.page} style={{ backgroundColor: '#f1f2f6' }}
                         selectedStyle={{ color: '#1B9CFC' }} onSelect={el => this.setState({ page: el.props.name })}>
-                        <Text name="first">تفاصيل الاعلان</Text>
-                        <Text name="second" selectedIconStyle={{ borderTopWidth: 2, borderTopColor: '#1B9CFC' }}>الطلبات</Text>
-                        <Text name="third">التعاقدات</Text>
+                        <Text name="first" selectedIconStyle={{ borderBottomWidth: 2, borderBottomColor: '#1B9CFC' }} style={{ fontSize: 18, color: 'grey' }} selectedStyle={{ color: 'black' }}>تفاصيل الاعلان</Text>
+                        <Text name="second" selectedIconStyle={{ borderBottomWidth: 2, borderBottomColor: '#1B9CFC' }} style={{ fontSize: 18, color: 'grey' }} selectedStyle={{ color: 'black' }}>الطلبات</Text>
+                        <Text name="third" selectedIconStyle={{ borderBottomWidth: 2, borderBottomColor: '#1B9CFC' }} style={{ fontSize: 18, color: 'grey' }} selectedStyle={{ color: 'black' }}>التعاقدات</Text>
                     </Tabs>
                 </View>
+                <Userinfo />
+                <Userinfo />
             </View>
         );
     }
@@ -58,13 +61,14 @@ const styles = StyleSheet.create({
         height: height,
         flex: 1,
         flexDirection: "column",
-        backgroundColor:'white'
+        backgroundColor: '#f1f2f6'
     },
     ScreenTitle: {
         flexDirection: "row",
         justifyContent: "flex-end",
-        margin: 0.05 * width,
-        marginBottom: -0.02 * width
+        margin: 0.03 * width,
+        marginBottom: -0.02 * width,
+        marginTop: 0.02 * width
     },
     CampaignTitle: {
         flexDirection: "row",
@@ -73,5 +77,5 @@ const styles = StyleSheet.create({
     },
     scene: {
         flex: 1,
-    },
+    }
 });

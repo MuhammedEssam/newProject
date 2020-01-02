@@ -78,31 +78,31 @@ class UserInfo extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        flexDirection: "column"
+        flex:1,
+        flexDirection: "column",
+        marginBottom:0.08*height,
+        margin:0.02*width,
+        backgroundColor:'white',
+        borderRadius:10
     },
     upperHalf: {
         flexDirection: "row-reverse",
-        backgroundColor: "white"
+        alignItems:"flex-start"
     },
     downSection: {
         flex: 1,
         flexDirection: "column",
-        backgroundColor: "white",
-        
+        marginTop:-0.04*height
     },
     rightSection: {
         flex: 1,
         alignItems: "flex-start",
-        flexDirection: "row-reverse",
-        paddingTop: "10%"
+        flexDirection: "row-reverse"
     },
     leftSection: {
-
-        flex: 1,
         flexDirection: "row",
         justifyContent: "space-between",
-        alignItems: "flex-start",
+        marginTop:-0.06*height
     },
     profilePicture: {
         width: width * 0.12,

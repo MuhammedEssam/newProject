@@ -26,10 +26,11 @@ import UserInfo from './Components/userInformation'
 import SocialMedia from './Components/socialMedia'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Campaign from './Components/campaign'
+import SwiperCom from './Components/swiper'
 const { height, width } = Dimensions.get("window")
 class App extends Component {
   render() {
-    return <Campaign />
+    return <SwiperCom />
   }
 }
 

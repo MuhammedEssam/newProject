@@ -5,7 +5,7 @@ import {
     ScrollView,
     View,
     Text,
-    StatusBar, Dimensions, Image, TouchableOpacity
+    StatusBar, Dimensions, Image, TouchableOpacity, TouchableNativeFeedbackBase
 } from 'react-native';
 import {
     Header,
@@ -23,7 +23,7 @@ const { height, width } = Dimensions.get("window")
 export default class Campaign extends Component {
     constructor(props) {
         super(props);
-        this.state = { page: 'first' };
+        this.state = { page: 'first',allarr:[1,1,1,1,1] };
     }
     render() {
         var self = this;
@@ -39,7 +39,7 @@ export default class Campaign extends Component {
                         <Icon name="ios-arrow-forward" size={25} color="#1B9CFC" /></TouchableOpacity>
                 </View>
                 <View style={styles.CampaignTitle}>
-                    <Text style={{ color: "#535c68", fontSize: 25, fontWeight: "bold" }}>اعلان وجبة جديدة لشارومر </Text>
+                    <Text style={{ color: "#535c68", fontSize: 25, fontWeight: "bold" }}>اعلان وجبة جديدة لشارومر</Text>
                 </View>
                 <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: 0.05 * height }}>
                     <Tabs selected={this.state.page} style={{ backgroundColor: '#f1f2f6' }}
@@ -49,8 +49,14 @@ export default class Campaign extends Component {
                         <Text name="third" selectedIconStyle={{ borderBottomWidth: 2, borderBottomColor: '#1B9CFC' }} style={{ fontSize: 18, color: 'grey' }} selectedStyle={{ color: 'black' }}>التعاقدات</Text>
                     </Tabs>
                 </View>
-                <Userinfo />
-                <Userinfo />
+                <ScrollView>
+                    
+               {this.state.allarr.map((alement,index)=>{
+                   return(
+                    <Userinfo key={index} />
+                   )
+               })}
+                </ScrollView>
             </View>
         );
     }
@@ -59,7 +65,7 @@ const styles = StyleSheet.create({
     container: {
         width: width,
         height: height,
-        flex: 1,
+        flex: 1, 
         flexDirection: "column",
         backgroundColor: '#f1f2f6'
     },

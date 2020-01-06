@@ -35,7 +35,7 @@ class UserInfo extends Component {
                             <Image source={require('../Images/Filtered_Image.png')} style={styles.profilePicture} /></TouchableOpacity>
                         <View style={styles.influencerInfo}>
                             <TouchableOpacity>
-                                <Text style={{ fontSize: 25, color: '#2d3436' }}>اسم المؤثر</Text></TouchableOpacity>
+                                <Text style={{ fontSize: 25, color: '#2d3436' }} numberOfLines={1}>اسم المؤثر</Text></TouchableOpacity>
                             <View style={styles.location}>
                                 <Icon name="location-on" size={20} color="#636e72" />
                                 <Text style={{ fontSize: 20, color: '#636e72' }}>البلد</Text>
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
         flexDirection: "column",
-        marginBottom:0.08*height,
+        // marginBottom:0.08*height,
         margin:0.02*width,
         backgroundColor:'white',
         borderRadius:10
@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
     downSection: {
         flex: 1,
         flexDirection: "column",
-        marginTop:-0.04*height
+        marginTop:-0.04*height,
+        margin:0.02*height
     },
     rightSection: {
         flex: 1,
@@ -114,7 +115,8 @@ const styles = StyleSheet.create({
     influencerInfo: {
         alignItems: "center",
         alignItems: "flex-end",
-        marginTop: height * 0.03
+        marginTop: height * 0.03,
+        flex:1
     },
     location: {
         flexDirection: "row-reverse",

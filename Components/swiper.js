@@ -24,18 +24,33 @@ const { height, width } = Dimensions.get("window")
 export default class SwiperCom extends Component {
     render() {
         return (
-            <View style={{backgroundColor:'red',width:width,height:height}}>
-            <Swiper style={styles.wrapper} showsButtons={true}>
-                <View style={styles.slide1}>
-                    <Text style={styles.text}>Hello Swiper</Text>
-                </View>
-                <View style={styles.slide2}>
-                    <Text style={styles.text}>Beautiful</Text>
-                </View>
-                <View style={styles.slide3}>
-                    <Text style={styles.text}>And simple</Text>
-                </View>
-            </Swiper>
+            <View style={{ backgroundColor: 'red', width: width, height: height }}>
+                <Swiper style={styles.wrapper} showsButtons={true}>
+                    <View style={styles.slide1}>
+                        <Image source={require('../Images/joker2.jpg')} resizeMode="center" style={{ height: height }} />
+                        <View style={{ top: 0, left: 0, right: 0, bottom: 0, position: "absolute", justifyContent: "center", alignItems: "center" }}>
+                            <Text style={styles.text}>you are awful murray!</Text>
+                        </View>
+                    </View>
+                    <View style={styles.slide2}>
+                        <Image source={require('../Images/maxresdefault.jpg')} resizeMode="center" style={{ height: height }} />
+                        <View style={{ top: 0, left: 0, right: 0, bottom: 0, position: "absolute", justifyContent: "center", alignItems: "center" }}>
+                            <Text style={styles.text}>you get what you deserver</Text>
+                        </View>
+                    </View>
+                    <View style={styles.slide3}>
+                        <Image source={require('../Images/images4.jpg')} style={{ height: height }} resizeMode="contain"/>
+                        <View style={{ top: 0, left: 0, right: 0, bottom: 0, position: "absolute", justifyContent: "center", alignItems: "center" }}>
+                            <Text style={styles.text}></Text>
+                        </View>
+                    </View>
+                    <View style={styles.slide4}>
+                        <Image source={require('../Images/joker3.jpg')}  resizeMode="cover" style={{alignSelf:"center",height: height}}/>
+                        <View style={{ top: 0, left: 0, right: 0, bottom: 0, position: "absolute", justifyContent: "center", alignItems: "center" }}>
+                            <Text style={styles.text}>Epic!</Text>
+                        </View>
+                    </View>
+                </Swiper>
             </View>
         )
     }
@@ -46,23 +61,30 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#9DD6EB'
+        position: "relative",
+        backgroundColor: "white"
     },
     slide2: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#97CAE5'
+        backgroundColor: "white"
     },
     slide3: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#92BBD9'
+        backgroundColor: "white"
     },
     text: {
-        color: '#fff',
+        color: 'white',
         fontSize: 30,
         fontWeight: 'bold'
+    },
+    slide3: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: "white"
     }
 })

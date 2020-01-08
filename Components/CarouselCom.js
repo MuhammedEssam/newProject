@@ -19,17 +19,44 @@ import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Swiper from 'react-native-swiper'
 import Tabs from 'react-native-tabs'
 import Userinfo from './userInformation'
+import Carousel from 'react-native-snap-carousel';
+
 const { height, width } = Dimensions.get("window")
 
 export default class CarouselCom extends Component {
+    state = {
+        entries: [{
+            title: "joker",
+            uri: require("../Images/joker2.jpg")
+        },
+        {
+            title: "Image",
+            uri: require("../Images/joker3.jpg")
+        }
+        ]
+    }
+    _renderItem = ({ item, index }) => {
+        return (
+            <View  >
+                <Image source={item.uri} style={{ width: 210, height: 500, top: "10%" }} />
+                <Text style={{ top: "10%" }}>{item.title}</Text>
+            </View>
+        );
+    }
+
     render() {
         return (
-            <View style={{ backgroundColor: 'red', width: width, height: height }}>
-                
-            </View>
-        )
+            <Carousel
+                ref={(c) => { this._carousel = c; }}
+                data={this.state.entries}
+                renderItem={this._renderItem}
+                sliderWidth={500}
+                itemWidth={200}
+                layout={'tinder'}
+            />
+        );
     }
 }
 const styles = StyleSheet.create({
-    
+
 })

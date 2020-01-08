@@ -32,6 +32,10 @@ export default class CarouselCom extends Component {
         {
             title: "Image",
             uri: require("../Images/joker3.jpg")
+        },
+        {
+            title: "Epic",
+            uri: require("../Images/images.jpg")
         }
         ]
     }
@@ -52,7 +56,7 @@ export default class CarouselCom extends Component {
                 renderItem={this._renderItem}
                 sliderWidth={500}
                 itemWidth={200}
-                layout={'tinder'}
+                loop
             />
         );
     }

@@ -21,6 +21,13 @@ import axios from "axios"
 import AsyncStorage from '@react-native-community/async-storage'
 const { height, width } = Dimensions.get("window")
 export default class AxiosCom extends Component {
+    goToScreen = (screenName) => {
+        Navigation.push(this.props.componentId, {
+          component: {
+            name: screenName
+          }
+        })
+      }
     constructor() {
         super();
         this.state = {
@@ -73,7 +80,10 @@ export default class AxiosCom extends Component {
                             placeholder="Password" name="Password" secureTextEntry={true} onChangeText={(text) => this.updateValue(text, 'Password')}>
                         </TextInput>
                     </View>
-                    <TouchableOpacity style={styles.btn} onPress={this.signIn}>
+                    <TouchableOpacity style={styles.btn} onPress={async()=>{
+                       await this.signIn();
+                        this.goToScreen('UserData');
+                    }}>
                         <Text style={{ fontSize: 20, textAlign: "center" }}>Login</Text>
                     </TouchableOpacity>
                 </View>

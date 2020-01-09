@@ -29,10 +29,12 @@ import Campaign from './Components/campaign'
 import SwiperCom from './Components/swiper'
 import AxiosCom from './Components/Axios'
 import CarouselCom from './Components/CarouselCom'
+import UserData from './Components/UserData'
+import { Navigation } from 'react-native-navigation'
 const { height, width } = Dimensions.get("window")
 class App extends Component {
   render() {
-    return <AxiosCom />
+    return <SwiperCom />
   }
 }
 

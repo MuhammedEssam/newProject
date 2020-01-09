@@ -27,11 +27,12 @@ import SocialMedia from './Components/socialMedia'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Campaign from './Components/campaign'
 import SwiperCom from './Components/swiper'
+import AxiosCom from './Components/Axios'
 import CarouselCom from './Components/CarouselCom'
 const { height, width } = Dimensions.get("window")
 class App extends Component {
   render() {
-    return <CarouselCom />
+    return <AxiosCom />
   }
 }
 

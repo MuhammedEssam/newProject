@@ -34,7 +34,7 @@ import { Navigation } from 'react-native-navigation'
 const { height, width } = Dimensions.get("window")
 class App extends Component {
   render() {
-    return <SwiperCom />
+    return <AxiosCom />
   }
 }
 

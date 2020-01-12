@@ -19,6 +19,7 @@ import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Tabs from 'react-native-tabs'
 import axios from "axios"
 import AsyncStorage from '@react-native-community/async-storage'
+import {Navigation} from 'react-native-navigation'
 const { height, width } = Dimensions.get("window")
 export default class AxiosCom extends Component {
     goToScreen = (screenName) => {

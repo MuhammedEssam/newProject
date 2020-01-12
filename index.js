@@ -16,7 +16,7 @@ Navigation.registerComponent("Campaign", () => Campaign)
 Navigation.registerComponent("SwiperCom", () => SwiperCom)
 Navigation.registerComponent("AxiosCom", () => AxiosCom)
 Navigation.registerComponent("CarouselCom", () => CarouselCom)
-// Navigation.registerComponent("UserData", () => UserData)
+Navigation.registerComponent("UserData", () => UserData)
 
 Navigation.events().registerAppLaunchedListener(() => {
     Navigation.setRoot({
@@ -26,7 +26,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                 children: [
                     {
                         component: {
-                            name: "App"
+                            name: "AxiosCom"
                         }
                     }
                 ]

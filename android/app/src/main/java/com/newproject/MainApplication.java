@@ -13,6 +13,7 @@ import com.reactnativenavigation.react.ReactGateway;
 import java.util.Arrays;
 import java.util.List;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 
 public class MainApplication extends NavigationApplication {
 
@@ -37,6 +38,8 @@ public class MainApplication extends NavigationApplication {
         // No need to add RnnPackage and MainReactPackage
         return Arrays.<ReactPackage>asList(
             // eg. new VectorIconsPackage()
+            new AsyncStoragePackage(),
+            new RNCViewPagerPackage()
         );
     }
 

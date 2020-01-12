@@ -24,6 +24,7 @@ import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Tabs from 'react-native-tabs'
 import axios from "axios"
 import AsyncStorage from '@react-native-community/async-storage'
+import {Navigation} from 'react-native-navigation'
 const { height, width } = Dimensions.get("window")
 import { ListItem } from 'react-native-elements'
 export default class UserData extends Component {

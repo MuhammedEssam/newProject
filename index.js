@@ -29,7 +29,12 @@ Navigation.events().registerAppLaunchedListener(() => {
                             name: "AxiosCom"
                         }
                     }
-                ]
+                ],
+                options: {
+                    topBar: {
+                        visible: false
+                    }
+                }
             }
         }
     });
